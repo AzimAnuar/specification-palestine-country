@@ -1,4 +1,4 @@
-{%- set title = "Provide your " + specification["name"] + " data" -%}
+{%- set title = "Publish your " + specification["name"] + " data" -%}
 ---
 title: {{ title }}
 name: {{ specification["name"] }}
@@ -24,10 +24,12 @@ attachments:
 
 {{ tables["specification-reason"][specification["specification-reason"]]["guidance"] | markdown }}
 
-Providing planning data means making it available publicly to a standard so that
-services such as <a href="https://planning.data.gov.uk">planning.data.gov.uk</a> can find it, 
-understand its quality, and trust it will be sustained.
-[Help design this and other data standards to ensure they your needs](https://design.planning.data.gov.uk). 
+Providing planning data means making it available publicly to a standard, so that anyone using
+services such as <a href="https://planning.data.gov.uk">planning.data.gov.uk</a> can:
+
+* find it
+* understand its quality, meaning and purpose
+* trust it will be accurate and maintained
 
 ## Providing your {{ specification["name"] }} data
 
@@ -36,16 +38,15 @@ understand its quality, and trust it will be sustained.
 ## Contact us
 
 $CTA
-If you need any help at any stage of the process,
-let us know by emailing <digitalland@communities.gov.uk> and a member of our team will be in touch.
+Email <digitalland@communities.gov.uk> to get help.
 $CTA
 
-You can participate in 
+You can help
 {%- if not specification["consideration"] %}
-improving the design of this data 
+improve the design of this and other planning data
 {% else %}
-[improving the design of this data](https://design.planning.data.gov.uk/consideration/{{ specification["consideration"] }})
-{%- endif %},
-and help ensure planning data meets your needs at [design.planning.data.gov.uk](https://design.planning.data.gov.uk). 
+[improve the design of this and other planning data](https://design.planning.data.gov.uk/consideration/{{ specification["consideration"] }})
+{%- endif %}
+at [design.planning.data.gov.uk](https://design.planning.data.gov.uk). 
 
 ## Technical specifications

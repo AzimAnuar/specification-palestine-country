@@ -943,12 +943,14 @@ development-plan-timetable,documentation-url
 development-plan-timetable,end-date
 development-plan-timetable,entity
 development-plan-timetable,entry-date
+development-plan-timetable,event-date
 development-plan-timetable,predicted-date
 development-plan-timetable,name
 development-plan-timetable,notes
 development-plan-timetable,organisation
 development-plan-timetable,prefix
 development-plan-timetable,reference
+development-plan-timetable,actual-date
 development-plan-timetable,start-date
 development-plan-type,end-date
 development-plan-type,entity
@@ -960,6 +962,7 @@ development-plan-type,reference
 development-plan-type,start-date
 development-plan,adopted-date
 development-plan,dataset
+development-plan,document-count
 development-plan,documentation-url
 development-plan,document-url
 development-plan,end-date
@@ -1906,6 +1909,7 @@ local-plan,period-end-date
 local-plan,period-start-date
 local-plan,prefix
 local-plan,reference
+local-plan,required-housing
 local-plan,start-date
 local-planning-authority,document-url
 local-planning-authority,documentation-url
@@ -2109,6 +2113,7 @@ minerals-plan-boundary,prefix
 minerals-plan-boundary,reference
 minerals-plan-boundary,start-date
 minerals-plan,dataset
+minerals-plan,document-count
 minerals-plan,documentation-url
 minerals-plan,document-url
 minerals-plan,end-date
@@ -2313,6 +2318,7 @@ organisation,statistical-geography
 organisation,website
 organisation,wikidata
 organisation,wikipedia
+organisation,organisations
 ownership-status,description
 ownership-status,end-date
 ownership-status,entity
@@ -3128,6 +3134,8 @@ specification,documentation-url
 specification,end-date
 specification,entry-date
 specification,github-discussion
+specification,long-name
+specification,long-plural
 specification,name
 specification,json
 specification,prefix
@@ -3365,6 +3373,7 @@ waste-plan-boundary,prefix
 waste-plan-boundary,reference
 waste-plan-boundary,start-date
 waste-plan,dataset
+waste-plan,document-count
 waste-plan,documentation-url
 waste-plan,document-url
 waste-plan,end-date

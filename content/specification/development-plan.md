@@ -1,12 +1,15 @@
 ---
 specification: development-plan
 name: development plan
+long-name: local plan, minerals and waste plan, and supplementary plan
+long-plural: local plans, minerals and waste plans, and supplementary plans
 plural: development plans
 description: headline information about development plans
 specification-status: working-draft
 specification-reason: local-plans-2025
 consideration: development-plans-and-timetables
 document-url: https://digital-land.github.io/specification/specification/development-plan/
+date-precision: YYYY-MM-DD
 start-date: ''
 end-date: ''
 entry-date: '2026-01-23'
@@ -31,16 +34,16 @@ datasets:
           - field: period-end-date
             requirement-level: MUST
           - field: local-planning-authorities
-            requirement-level: SHOULD
+            requirement-level: CONDITIONAL
             datasets:
                 - local-plan
                 - supplementary-plan
           - field: mineral-planning-authorities
-            requirement-level: SHOULD
+            requirement-level: CONDITIONAL
             datasets:
                 - minerals-plan
           - field: waste-planning-authorities
-            requirement-level: SHOULD
+            requirement-level: CONDITIONAL
             datasets:
                 - waste-plan
           - field: documentation-url
@@ -52,13 +55,16 @@ datasets:
                   requirement-level: MUST
                   text: 'link to the core local plan document described by this data.'
           - field: required-housing
-            requirement-level: MUST
+            requirement-level: CONDITIONAL
+            datasets:
+                - local-plan
+          - field: document-count
+            requirement-level: CONDITIONAL
+            datasets:
+                - minerals-plan
+                - waste-plan
           - field: entry-date
-            requirement-level: SHOULD
-          - field: start-date
-            requirement-level: SHOULD
-          - field: end-date
-            requirement-level: MAY
+            requirement-level: MUST
           - field: notes
             requirement-level: MAY
     - dataset: development-plan-timetable
@@ -72,30 +78,12 @@ datasets:
           - field: development-plan-event
             requirement-level: MUST
             dataset: local-plan-event
-          - field: predicted-date
+          - field: event-date
             requirement-level: MUST
+          - field: actual-date
+            requirement-level: CONDITIONAL
           - field: entry-date
-            requirement-level: SHOULD
-          - field: start-date
-            requirement-level: SHOULD
-          - field: notes
-            requirement-level: MAY
-    - dataset: local-plan-housing
-      priority: 3
-      requirement-level: SHOULD
-      fields:
-          - field: reference
             requirement-level: MUST
-          - field: local-plan
-            requirement-level: MUST
-          - field: required-housing
-            requirement-level: MUST
-          - field: entry-date
-            requirement-level: SHOULD
-          - field: start-date
-            requirement-level: SHOULD
-          - field: end-date
-            requirement-level: MAY
           - field: notes
             requirement-level: MAY
 ---

@@ -115,7 +115,7 @@
     
     <h2 class="govuk-heading-s" id="description">Description</h2>
     <p>
-    A log of past and predicted milestones and events when producing a development plan.
+    A log of past and committed milestones and events when producing a development plan.
     </p>
     
 
@@ -132,6 +132,15 @@
         </tr>
       </thead>
       <tbody class="govuk-table__body">
+    
+        
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" id="field_actual-date"><a href="../../field/actual-date">actual-date</a>
+          </td>
+          <td class="govuk-table__cell">Actual date</td>
+          <td class="govuk-table__cell"><a href="../../datatype/datetime">datetime</a></td>
+          <td class="govuk-table__cell">1</td>
+        </tr>
     
         
         <tr class="govuk-table__row">
@@ -175,6 +184,15 @@
           </td>
           <td class="govuk-table__cell">Entity</td>
           <td class="govuk-table__cell"><a href="../../datatype/integer">integer</a></td>
+          <td class="govuk-table__cell">1</td>
+        </tr>
+    
+        
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell" id="field_event-date"><a href="../../field/event-date">event-date</a>
+          </td>
+          <td class="govuk-table__cell">Event date</td>
+          <td class="govuk-table__cell"><a href="../../datatype/datetime">datetime</a></td>
           <td class="govuk-table__cell">1</td>
         </tr>
     
@@ -265,50 +283,50 @@
 
     
     <h2 class="govuk-heading-s" id="guidance">Guidance</h2>
-    <p>Record the key events and milestones in the timetable when producing your development plan.
-For new local plans your timetable must include a precise <code>predicted-date</code> against each entry.
-Update the entry to include the actual date in the <code>start-date</code> field when the event takes place.</p>
-<p>For local plans, minerals plans, and waste plans being produced under the new local plans process,
-your timetable must include a entry for each of the following events:</p>
+    <p>Your timetable must include an <code>event-date</code> for when you intend to meet the relevant stage of plan-making.
+Update the entry to include the actual date in the <code>actual-date</code> field when the event takes place.</p>
+<p>For local plans, minerals and waste plans your timetable must include an entry for each of the
+following <code>development-plan-event</code> field values where applicable:</p>
 <ul>
-<li><code>commenced</code></li>
+<li><code>publish-notice-intention-commence</code></li>
 <li><code>scoping-consultation-start</code></li>
 <li><code>scoping-consultation-end</code></li>
 <li><code>gateway-1-self-assessment</code></li>
-<li><code>content-consultation-start</code></li>
-<li><code>content-consultation-end</code></li>
+<li><code>plan-content-evidence-consultation-start</code></li>
+<li><code>plan-content-evidence-consultation-end</code></li>
 <li><code>gateway-2-advice-sought</code></li>
-<li><code>gateway-2-advice-published</code></li>
 <li><code>proposed-plan-consultation-start</code></li>
 <li><code>proposed-plan-consultation-end</code></li>
 <li><code>gateway-3-advice-sought</code></li>
-<li><code>gateway-3-advice-published</code></li>
-<li><code>gateway-3-further-advice-sought</code></li>
-<li><code>gateway-3-repeat-advice-published</code></li>
 <li><code>examination-submitted</code></li>
-<li><code>examination-recommendations-published</code></li>
 <li><code>adopted</code></li>
 </ul>
-<p>Supplementary plans being produced under the new local plans process must contain a row for each of the following events:</p>
+<p>If you are also creating a supplementary plan, your local or minerals and waste plans timetable
+must include an entry with the following development-plan-event fields where applicable:</p>
 <ul>
-<li><code>commenced</code></li>
+<li><code>publish-notice-intention-commence</code></li>
 <li><code>proposed-plan-consultation-start</code></li>
 <li><code>proposed-plan-consultation-end</code></li>
 <li><code>examination-submitted</code></li>
 <li><code>adopted</code></li>
 </ul>
-<p>Your development plan timetable may also include rows with dates for each of the following events:</p>
+<p>Your development plan timetable must also include rows with dates if any of the following events apply:</p>
 <ul>
+<li><code>gateway-3-repeat-advice-published</code></li>
+<li><code>examination-recommendations-published</code></li>
 <li><code>main-modification-consultation-start</code></li>
 <li><code>main-modification-consultation-end</code></li>
 <li><code>examination-pause-start</code></li>
 <li><code>examination-pause-end</code></li>
 <li><code>additional-consultation-start</code></li>
 <li><code>additional-consultation-end</code></li>
-<li><code>annual-monitoring-report-published</code></li>
-<li><code>plan-evaluation-report-published</code></li>
 <li><code>withdrawn</code></li>
 <li><code>revoked</code></li>
+</ul>
+<p>If you repeat Gateway 3, you must include these events in your timetable:</p>
+<ul>
+<li><code>gateway-3-further-advice-sought</code></li>
+<li><code>gateway-3-advice-published</code></li>
 </ul>
     
 

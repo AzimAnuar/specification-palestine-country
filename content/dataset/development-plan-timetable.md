@@ -1,9 +1,9 @@
 ---
 attribution: crown-copyright
-collection: ''
+collection: local-plan
 consideration: development-plans-and-timetables
 dataset: development-plan-timetable
-description: log of past and predicted milestones and events when producing a development plan
+description: log of past and committed milestones and events when producing a development plan
 end-date: ''
 entity-maximum: '5199999'
 entity-minimum: '5100000'
@@ -18,9 +18,10 @@ fields:
     - value: 'central-lincolnshire'
 - field: development-plan-event
   guidance: |
-    Enter a [Development Plan Event](https://www.planning.data.gov.uk/dataset/development-plan-event) reference.
+    Enter a [Development Plan Event](https://www.planning.data.gov.uk/dataset/development-plan-event) reference
+    for each key event or milestone.
   examples:
-     - value: commenced
+     - value: publish-notice-intention-commence
      - value: examination-submitted
      - value: adopted
 - field: document-url
@@ -37,6 +38,10 @@ fields:
      This field is currently unused in this dataset.
 - field: entity
 - field: entry-date
+- field: event-date
+  description: predicted date for the event
+  guidance: |
+      Enter the date when this event will happen.
 - field: predicted-date
   description: predicted date for the event
   guidance: |
@@ -52,62 +57,67 @@ fields:
 - field: prefix
 - field: reference
   guidance: |
-     Give each event a reference which is unique for the event within the dataset.
-     Where a timetable has more than one event of the same type, you can add a date to make them unique.
+     Give each event a unique reference.
   examples:
      - value: LP1-public-consultation
      - value: LP1-public-consultation-2025
-- field: start-date
+- field: actual-date
   description: date of the timetable event
   guidance: |
-     Enter the date when the timetable event occurred. Leave this field blank when the event is in the future.
+     Enter the date when the timetable event happened. Leave this field blank when the event is in the future.
+- field: start-date
+  description: date of the timetable event
+  notes: |
+     This value is defaulted from the `actual-date` value.
 github-discussion: 26
 guidance: |
-    Record the key events and milestones in the timetable when producing your development plan.
-    For new local plans your timetable must include a precise `predicted-date` against each entry.
-    Update the entry to include the actual date in the `start-date` field when the event takes place.
+    Your timetable must include an `event-date` for when you intend to meet the relevant stage of plan-making.
+    Update the entry to include the actual date in the `actual-date` field when the event takes place.
 
-    For local plans, minerals plans, and waste plans being produced under the new local plans process,
-    your timetable must include a entry for each of the following events:
+    For local plans, minerals and waste plans your timetable must include an entry for each of the
+    following `development-plan-event` field values where applicable:
 
-    * `commenced`
+    * `publish-notice-intention-commence`
     * `scoping-consultation-start`
     * `scoping-consultation-end`
     * `gateway-1-self-assessment`
-    * `content-consultation-start`
-    * `content-consultation-end`
+    * `plan-content-evidence-consultation-start`
+    * `plan-content-evidence-consultation-end`
     * `gateway-2-advice-sought`
-    * `gateway-2-advice-published`
     * `proposed-plan-consultation-start`
     * `proposed-plan-consultation-end`
     * `gateway-3-advice-sought`
-    * `gateway-3-advice-published`
-    * `gateway-3-further-advice-sought`
-    * `gateway-3-repeat-advice-published`
     * `examination-submitted`
-    * `examination-recommendations-published`
     * `adopted`
 
-    Supplementary plans being produced under the new local plans process must contain a row for each of the following events:
+    If you are also creating a supplementary plan, your local or minerals and waste plans timetable
+    must include an entry with the following development-plan-event fields where applicable:
 
-    * `commenced`
+    * `publish-notice-intention-commence`
     * `proposed-plan-consultation-start`
     * `proposed-plan-consultation-end`
     * `examination-submitted`
     * `adopted`
-    
-    Your development plan timetable may also include rows with dates for each of the following events:
+ 
+    Your development plan timetable must also include rows with dates if any of the following events apply:
 
+    * `gateway-3-repeat-advice-published`
+    * `examination-recommendations-published`
     * `main-modification-consultation-start`
     * `main-modification-consultation-end`
     * `examination-pause-start`
     * `examination-pause-end`
     * `additional-consultation-start`
     * `additional-consultation-end`
-    * `annual-monitoring-report-published`
-    * `plan-evaluation-report-published`
     * `withdrawn`
     * `revoked`
+
+    If you repeat Gateway 3, you must include these events in your timetable:
+
+    * `gateway-3-further-advice-sought`
+    * `gateway-3-advice-published`
+
+
 key-field: ''
 licence: ogl3
 name: development plan timetable

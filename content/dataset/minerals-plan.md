@@ -1,6 +1,6 @@
 ---
 attribution: crown-copyright
-collection:
+collection: local-plan
 consideration: minerals-and-waste-plan
 dataset: minerals-plan
 description: 'minerals plans prepared by a Mineral Planning Authority'
@@ -10,6 +10,7 @@ entity-minimum: '530000'
 entry-date: '2025-11-14'
 fields:
 - field: dataset
+- field: document-count
 - field: documentation-url
 - field: document-url
 - field: end-date
@@ -20,12 +21,13 @@ fields:
 - field: mineral-planning-authorities
   description: mineral planning authority areas covered by the minerals plan
   guidance: |
-    Enter the reference for the
+    Enter the GSS code for the 
     [Mineral Planning Authority](https://www.planning.data.gov.uk/dataset/mineral-planning-authority)
-    area covered by this minerals plan.
-    For a joint minerals plan, enter the list of Mineral Planning Authority references, each separated by semi-colon ';' character.
+    area that this minerals plan covers.
+    For a joint minerals plan, enter the list of references and separate each of them with a semi-colon.
   examples:
-    - value: 'GMCA'
+    - value: 'E47000001'
+    - value: 'E60000331;E60000225'
 - field: name
 - field: notes
 - field: organisation

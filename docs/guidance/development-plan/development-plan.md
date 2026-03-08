@@ -1,5 +1,5 @@
 ---
-title: Provide your development plan data
+title: Publish your development plan data
 name: development plan
 url: 
 summary: 
@@ -21,23 +21,33 @@ attachments:
 
 ^Follow this guidance when providing your development plan data.^
 
-<p>Local planning authorities (LPAs) must create, publish and keep a timetable up to date for a 
-local plan, minerals plan, waste plan, or supplementary plan <a href="https://www.gov.uk/government/collections/create-or-update-a-local-plan-using-the-new-system">created or updated using the new local plan system</a>.</p>
+<p>You must follow this approved data standard to meet the requirements of the 
+<a href="#TBC">Town and Country Planning (Local Planning) (England) Regulations 2026</a>
+and the <a href="#TBC">Planning Data (England) Regulations 2026</a>.</p>
+<p>Local planning authorities (LPAs) must create, publish and keep a plan timetable up to date. 
+This applies to the following plans that you create or update using the new plan-making system:   </p>
+<ul>
+<li>local plans  </li>
+<li>minerals and waste plans  </li>
+<li>supplementary plans  </li>
+</ul>
 
-Providing planning data means making it available publicly to a standard so that
-services such as <a href="https://planning.data.gov.uk">planning.data.gov.uk</a> can find it, 
-understand its quality, and trust it will be sustained.
-[Help design this and other data standards to ensure they your needs](https://design.planning.data.gov.uk). 
+Providing planning data means making it available publicly to a standard, so that anyone using
+services such as <a href="https://planning.data.gov.uk">planning.data.gov.uk</a> can:
+
+* find it
+* understand its quality, meaning and purpose
+* trust it will be accurate and maintained
 
 ## Providing your development plan data
 
-Take the following steps to provide your development plan data:
+Take the following steps to provide your local plan, minerals and waste plan, and supplementary plan data:
 
 s1. [Prepare your data](#prepare-your-data)
 s2. [Check your data](#check-your-data)
 s3. [Publish your data](#publish-your-data)
 s4. [Tell us about your data](#tell-us-about-your-data)
-s5. [Keep your data up-to-date](#keep-your-data-up-to-date)
+s5. [Keep your data up to date](#keep-your-data-up-to-date)
 
 ## Prepare your data
 Start by reviewing any data we may already have about your organisation
@@ -49,28 +59,21 @@ This might include:
 * information found on your website
 * open data from other public sources
 
-We treat the data you provide as being more authoritative
-than data we have collected from you previously, or found elsewhere.
+We treat the data you provide as being more authoritative than data 
+we previously collected or that we find elsewhere.
 
 You can download tabular data we have for your organisation as a CSV file
-from the [check and provide service](https://provide.planning.data.gov.uk)
-and edit it using a spreadsheet or other CSV editors.
-
-Similarly, you can download geospatial data we have for your organisation as
-CSV or GeoJSON from [planning.data.gov.uk](https://planning.data.gov.uk)
-and modify it using QGIS or other GIS tools.
-
-You must provide data containing the mandatory fields identified here where 
-required by law.
-Otherwise your data does not need to be complete or perfect to start with.
-For many purposes having some data is better than no data,
-so start by providing the best development plans information you have,
-and continue to iterate and improve it over time.
-
-### Files
+from the [check and provide service](https://provide.planning.data.gov.uk),
+then edit it using a spreadsheet or other CSV editors.
 
 
-For development plans you need to provide 2 datasets:
+
+You must provide data for the mandatory fields identified.
+
+### Datasets
+
+
+For local plans, minerals and waste plans, and supplementary plans you need to provide 2 datasets:
 
 * [Development plan](#developmentplan-dataset)
 * [Development plan timetable](#developmentplantimetable-dataset)
@@ -79,27 +82,16 @@ For development plans you need to provide 2 datasets:
 
 
 
-You may also provide the following dataset:
-
-
-* [Local plan housing number](#local-plan-housing-number-dataset)
-
-
-
-Each dataset needs to be provided
+You need to provide each dataset 
 in a separate CSV file 
-following the government 
+and follow the government 
 [tabular data standard](https://www.gov.uk/government/publications/recommended-open-standards-for-government/tabular-data-standard).
 
 
-The fields and format of the data you need to
-prepare are documented below, and formally defined in the
-[technical specifications](#technical-specifications) attached to this page.
-
 ### Field names
 
-You can use uppercase or lowercase names for your fields, and any punctuation characters are ignored,
-meaning the following examples are all valid ways of naming the `start-date` field in your data:
+You can use a field name with uppercase, lowercase and any punctuation characters. 
+For example, you can use any of the following names for the `start-date` field in your data
 
 * `StartDate`
 * `Start Date`
@@ -108,28 +100,24 @@ meaning the following examples are all valid ways of naming the `start-date` fie
 
 ### Reference values
 
-Each dataset has a `reference` field.
-Reference values are important to help people find and link to the data.
-Where you don’t have a reference for an item, you will need to create one that is:
+Each dataset has a `reference` field.
+Reference values are important to help people find and link to your data.
+If you do not have a reference value for an item, you will need to create one that: 
 
-* unique within your data
-* persistent — it doesn’t change when the data is updated
+* is unique within your data 
+* does not change when the data is updated 
 
 A good reference is something you already use.
-Where these aren't unique, you make them unique by appending the year, or even the full date.
-Great references are short, easy to read, to pronounce and remember.
+If your reference is not unique, you can make them unique by adding the year or full date.
+Great references are:  
+
+* short  
+* easy to read  
+* easy to pronounce and remember
 
 ### Date values
 
-All dates must be in the format `YYYY-MM-DD`, following the guidance for [formatting dates and times in data](https://www.gov.uk/government/publications/open-standards-for-government/date-times-and-time-stamps-standard).
-
-Where you don't know the precise date you can enter just the month `YYYY-MM` or even just the year `YYYY`.
-The platform will default a `start-date` to the first of the month, or the first of January, and an `end-date` to the last day of the month, or the last day of December. For example:
-
-* `2025-04-19`
-* `2025-04`
-* `2025`
-
+All dates must be in the format `YYYY-MM-DD` as set out in the guidance for [formatting dates and times in data](https://www.gov.uk/government/publications/open-standards-for-government/date-times-and-time-stamps-standard).
 
 
 
@@ -153,14 +141,15 @@ Your development plan data must contain the following fields:
 * `period-end-date`
 * `documentation-url`
 * `document-url`
-* `required-housing`
+* `entry-date`
 
 
 
 ### reference
 
 Give each local plan a unique reference.
- For example:
+
+For example:
 
 * <code class="value">LP-BRX-2024</code>
 * <code class="value">34069/County-Durham-Plan</code>
@@ -170,7 +159,8 @@ Give each local plan a unique reference.
 
 ### name
 
-Use the title of the adopted local plan document. For example:
+Use the title of the local plan document.
+For example:
 
 * <code class="value">County Durham Plan</code>
 * <code class="value">South Oxfordshire Joint Local Plan</code>
@@ -178,7 +168,7 @@ Use the title of the adopted local plan document. For example:
 
 ### dataset
 
-Enter one of the following values to indicate the type of development plan:
+Enter one of the following values to show the type of development plan:
 
 * `local-plan`
 * `supplementary-plan`
@@ -188,27 +178,30 @@ Enter one of the following values to indicate the type of development plan:
 
 ### period-start-date
 
-Enter the start of the plan period. This is usually just a year in `YYYY` format. For example:
+Enter the start of the plan period. This is usually just a year in `YYYY` format.
+For example:
 
 * <code class="value">2026</code>
+* <code class="value">2027</code>
 
 
 ### period-end-date
 
-Enter the end of the plan period. This is usually just a year in `YYYY` format. For example:
+Enter the end of the plan period. This is usually just a year in `YYYY` format.
+For example:
 
 * <code class="value">2038</code>
+* <code class="value">2040</code>
 
 
 ### documentation-url
 
-The URL of the webpage on your website for the local plan
+Enter the URL of the webpage which links to your main or core plan document.
 
-Each entry in the local plan dataset should link to a documentation webpage that includes the information 
-in the entry as well as links to where this data may be downloaded, and any other supporting documents.
-Where there are several local plans listed on a single webpage, you can use an anchor link (fragment identifier) 
-to make the URL for each plan unique.
- For example:
+If there are several plans listed on a single webpage, you can use an anchor link (fragment identifier) 
+to make the `documentation-url` value for each plan unique.
+
+For example:
 
 * <code class="value">https://eastcambs.gov.uk/planning-and-building-control/planning-policy-and-guidance/adopted-local-plan/local-plan</code>
 * <code class="value">https://example.com/local-plans/#example-local-plan-2011</code>
@@ -217,44 +210,41 @@ to make the URL for each plan unique.
 
 ### document-url
 
-Enter the URL for the main or core plan document. This is usually a PDF file.
- For example:
+Enter the URL for the main or core plan document, which is usually a PDF file.
+
+If you do not have a main or core plan document on the day you publish your data, leave this field blank.
+
+For example:
 
 * <code class="value">https://www.walthamforest.gov.uk/sites/default/files/2024-02/LBWF_LocalPlan_LP1_Feb2024_compressed.pdf</code>
 
 
-### required-housing
+### entry-date
 
-Enter the minimum number of homes that the plan seeks to provide
-during the plan period.
- For example:
+Enter the date you created or modified the data.
 
-* <code class="value">24852</code>
+### Conditional fields
 
-This field is mandatory for new local plans. When producing a joint local plan you should also provide an entry for each `local-planning-authority` area in a separate `local-plan-housing` dataset.
-
-
-### Recommended fields
-
-Your development plan data should also contain the following fields:
+Your development plan data must also contain the following fields where they apply:
 
 
 
 * `local-planning-authorities`
 * `mineral-planning-authorities`
 * `waste-planning-authorities`
-* `entry-date`
-* `start-date`
+* `required-housing`
+* `document-count`
 
 
 
 ### local-planning-authorities
 
-Enter the reference (the GSS code) for the 
+Enter the GSS code for the 
 [Local Planning Authority](https://www.planning.data.gov.uk/dataset/local-planning-authority)
-area covered by this local or supplementary plan.
-For a joint local plan, enter the list of Local Planning Authority references, each separated by semi-colon &#39;;&#39; character.
- For example:
+area that this local or supplementary plan covers.
+For a joint local plan, enter the list of references and separate each of them by with a semi-colon.
+
+For example:
 
 * <code class="value">E60000001</code>
 * <code class="value">E60000132;E60000133;E60000135;E60000136</code>
@@ -262,35 +252,54 @@ For a joint local plan, enter the list of Local Planning Authority references, e
 
 ### mineral-planning-authorities
 
-Enter the reference for the
+Enter the GSS code for the 
 [Mineral Planning Authority](https://www.planning.data.gov.uk/dataset/mineral-planning-authority)
-area covered by this minerals plan.
-For a joint minerals plan, enter the list of Mineral Planning Authority references, each separated by semi-colon &#39;;&#39; character.
- For example:
+area that this minerals plan covers.
+For a joint minerals plan, enter the list of references and separate each of them with a semi-colon.
 
-* <code class="value">GMCA</code>
+For example:
+
+* <code class="value">E47000001</code>
+* <code class="value">E60000331;E60000225</code>
 
 
 ### waste-planning-authorities
 
-Enter the reference for the
+Enter the GSS code for the 
 [Waste Planning Authority](https://www.planning.data.gov.uk/dataset/waste-planning-authority)
-area covered by this waste plan.
-For a joint waste plan, enter the list of Waste Planning Authority references, each separated by semi-colon &#39;;&#39; character.
- For example:
+area that this local or supplementary plan covers.
+For a joint waste plan, enter the list of references and separate each of them with a semi-colon.
 
-* <code class="value">NLWA</code>
+For example:
+
+* <code class="value">E47000001</code>
+* <code class="value">E60000331;E60000225</code>
 
 
-### entry-date
+### required-housing
 
-Enter the date this data was created or modified.
+Enter the minimum number of homes that the plan seeks to provide during the plan period.  
 
-### start-date
+You must provide your required-housing when you launch your consultation on
+your proposed local plan. You must update your required-housing when you:
 
-Enter the date when the plan was officially adopted. 
-This value should match the relevant entry for when the plan was recorded as being adopted in the `local-plan-timetable`.
-Leave this value blank for plans which are being prepared, or haven&#39;t yet been adopted.
+* submit your plan for examination
+* publish the examiner’s recommendations and reasons
+* publish your adopted local plan
+
+For example:
+
+* <code class="value">10852</code>
+* <code class="value">10012</code>
+
+
+### document-count
+
+Enter the number of documents which collectively form the plan. This field is only required for a minerals and waste plan.
+
+
+
+
 
 
 ### Optional fields
@@ -299,71 +308,65 @@ Your development plan data may also contain the following fields:
 
 
 
-* `end-date`
 * `notes`
 
 
 
-### end-date
-
-Enter the date the local plan was withdrawn or revoked, otherwise leave this field blank.
-
-
 ### notes
 
-You may provide notes on how this data was made, and help users differentiate the plan from others with a similar name. For example:
+You may provide notes on how you made this data to help users differentiate the plan from others with a similar name.
+
+For example:
 
 * <code class="value">Barnsley&#39;s Local Plan as adopted by Full Council on 3 January 2019</code>
-
-
 ## Development plan timetable dataset
 
 
-Record the key events and milestones in the timetable when producing your development plan.
-For new local plans your timetable must include a precise `predicted-date` against each entry.
-Update the entry to include the actual date in the `start-date` field when the event takes place.
+Your timetable must include an `event-date` for when you intend to meet the relevant stage of plan-making.
+Update the entry to include the actual date in the `actual-date` field when the event takes place.
 
-For local plans, minerals plans, and waste plans being produced under the new local plans process,
-your timetable must include a entry for each of the following events:
+For local plans, minerals and waste plans your timetable must include an entry for each of the
+following `development-plan-event` field values where applicable:
 
-* `commenced`
+* `publish-notice-intention-commence`
 * `scoping-consultation-start`
 * `scoping-consultation-end`
 * `gateway-1-self-assessment`
-* `content-consultation-start`
-* `content-consultation-end`
+* `plan-content-evidence-consultation-start`
+* `plan-content-evidence-consultation-end`
 * `gateway-2-advice-sought`
-* `gateway-2-advice-published`
 * `proposed-plan-consultation-start`
 * `proposed-plan-consultation-end`
 * `gateway-3-advice-sought`
-* `gateway-3-advice-published`
-* `gateway-3-further-advice-sought`
-* `gateway-3-repeat-advice-published`
 * `examination-submitted`
-* `examination-recommendations-published`
 * `adopted`
 
-Supplementary plans being produced under the new local plans process must contain a row for each of the following events:
+If you are also creating a supplementary plan, your local or minerals and waste plans timetable
+must include an entry with the following development-plan-event fields where applicable:
 
-* `commenced`
+* `publish-notice-intention-commence`
 * `proposed-plan-consultation-start`
 * `proposed-plan-consultation-end`
 * `examination-submitted`
 * `adopted`
 
-Your development plan timetable may also include rows with dates for each of the following events:
+Your development plan timetable must also include rows with dates if any of the following events apply:
 
+* `gateway-3-repeat-advice-published`
+* `examination-recommendations-published`
 * `main-modification-consultation-start`
 * `main-modification-consultation-end`
 * `examination-pause-start`
 * `examination-pause-end`
 * `additional-consultation-start`
 * `additional-consultation-end`
-* `annual-monitoring-report-published`
-* `plan-evaluation-report-published`
 * `withdrawn`
 * `revoked`
+
+If you repeat Gateway 3, you must include these events in your timetable:
+
+* `gateway-3-further-advice-sought`
+* `gateway-3-advice-published`
 
 
 
@@ -378,15 +381,16 @@ Your development plan timetable data must contain the following fields:
 * `reference`
 * `development-plan`
 * `development-plan-event`
-* `predicted-date`
+* `event-date`
+* `entry-date`
 
 
 
 ### reference
 
-Give each event a reference which is unique for the event within the dataset.
-Where a timetable has more than one event of the same type, you can add a date to make them unique.
- For example:
+Give each event a unique reference.
+
+For example:
 
 * <code class="value">LP1-public-consultation</code>
 * <code class="value">LP1-public-consultation-2025</code>
@@ -395,7 +399,8 @@ Where a timetable has more than one event of the same type, you can add a date t
 ### development-plan
 
 Enter the reference of the development plan which this event forms part of its timetable.
- For example:
+
+For example:
 
 * <code class="value">LP-BRX-2024</code>
 * <code class="value">central-lincolnshire</code>
@@ -403,44 +408,42 @@ Enter the reference of the development plan which this event forms part of its t
 
 ### development-plan-event
 
-Enter a [Development Plan Event](https://www.planning.data.gov.uk/dataset/development-plan-event) reference.
- For example:
+Enter a [Development Plan Event](https://www.planning.data.gov.uk/dataset/development-plan-event) reference
+for each key event or milestone.
 
-* <code class="value">commenced</code>
+For example:
+
+* <code class="value">publish-notice-intention-commence</code>
 * <code class="value">examination-submitted</code>
 * <code class="value">adopted</code>
 
 
-### predicted-date
+### event-date
 
-Enter the date when this event is expected to happen.
- For example:
-
-* <code class="value">2027-01-01</code>
-
-New local plans require a single, precise date.
-When recording events for older schemes where the predicted date is a range, you may record an approximate date for the period.
-
-
-
-### Recommended fields
-
-Your development plan timetable data should also contain the following fields:
-
-
-
-* `entry-date`
-* `start-date`
-
+Enter the date when this event will happen.
 
 
 ### entry-date
 
-Enter the date this data was created or modified.
+Enter the date you created or modified the data.
 
-### start-date
+### Conditional fields
 
-Enter the date when the timetable event occurred. Leave this field blank when the event is in the future.
+Your development plan timetable data must also contain the following fields where they apply:
+
+
+
+* `actual-date`
+
+
+
+### actual-date
+
+Enter the date when the timetable event happened. Leave this field blank when the event is in the future.
+
+
+
+
 
 
 ### Optional fields
@@ -455,97 +458,7 @@ Your development plan timetable data may also contain the following fields:
 
 ### notes
 
-Enter any notes or commentary which helps you or others understand how this data was made, or how it may be interpreted.
-
-## Local plan housing number dataset
-
-
-Use this dataset to provide the individual `required-housing` number for each Local Planning Authority within a joint new local plan.
-You may also use this dataset to provide additional housing numbers related to a local plan.
-There is no need to provide this dataset for other kinds of plan.
-
-
-
-
-
-### Mandatory fields
-
-Your local plan housing number data must contain the following fields:
-
-
-
-* `reference`
-* `local-plan`
-* `required-housing`
-
-
-
-### reference
-
-Give each set of housing numbers a unique reference value.
- For example:
-
-* <code class="value">34069/County-Durham-Plan</code>
-* <code class="value">central-lincolnshire</code>
-* <code class="value">barnet-local-plan-2021-2036</code>
-
-
-### local-plan
-
-Enter the `reference` for the local plan which these numbers apply.
-
-
-### required-housing
-
-Enter the minimum number of homes that the plan seeks to provide
-within this `local-planning-authority` area.
- For example:
-
-* <code class="value">24852</code>
-
-
-### Recommended fields
-
-Your local plan housing number data should also contain the following fields:
-
-
-
-* `entry-date`
-* `start-date`
-
-
-
-### entry-date
-
-Enter the date this data was created or modified.
-
-### start-date
-
-Enter the date these numbers were finalised.
-
-
-### Optional fields
-
-Your local plan housing number data may also contain the following fields:
-
-
-
-* `end-date`
-* `notes`
-
-
-
-### end-date
-
-Enter the date these numbers were withdrawn, otherwise leave this field blank.
-
-
-### notes
-
-You may provide a short description to help users differentiate the plan from others with a similar name. For example:
-
-* <code class="value">Barnsley&#39;s Local Plan as adopted by Full Council on 3 January 2019</code>
-
+Enter any notes or commentary which helps to understand this data.
 
 ## Check your data
 Use the [check and provide service](https://provide.planning.data.gov.uk) to review your data before you publish it. 
@@ -565,8 +478,7 @@ An endpoint is a URL from which anyone can download the data. This can be either
 
 * a single file hosted on your website 
 * a file hosted on another public website including GitHub
-* an Open Geospatial Consortium Web Feature Service (OGC WFS) 
-* an open application programming interface (API) such as ArcGIS
+
 
 Ensure your endpoint URL is documented and linked to from a public webpage to help people easily find and download the data.
 
@@ -582,39 +494,34 @@ It is important that the source webpage links to the endpoint documentation webp
 help users trust the authenticity of the data.
 
 ## Tell us about your data
-Once you have published the data, tell us about it so we can index and quickly make it available 
-nationally on [planning.data.gov.uk](https://planning.data.gov.uk).
+Once you have published the data, 
+use the [check and provide service](https://provide.planning.data.gov.uk/) to tell us where it is. 
+This is so we can index the data and quickly make it available nationally on planning.data.gov.uk. 
 
-Use the [check and provide service](https://provide.planning.data.gov.uk/) to tell us where it is. 
+For each dataset, you will need to provide the: 
 
-You will need to provide for each dataset:
-
-* the **source webpage** URL where the information in the data is presented on your website
-* the **endpoint** URL from which the data can be collected
+* **source webpage URL** where the information in the data is presented on your website 
+* **endpoint URL** where you can collect the data 
 
 The service also asks for your name and email address as a point of contact in case of any issues.
 
-## Keep your data up-to-date
-Continue to improve your data, and act on the feedback from [the service](https://provide.planning.data.gov.uk) 
-to ensure your data meets the specification.
+## Keep your data up to date
+Continue to improve your data and act on the [the service feedback](https://provide.planning.data.gov.uk)
+to make sure that your data meets the specification. 
 
-You also need to update and republish your data whenever there's a change to your development plans information.
+We update [planning.data.gov.uk](https://planning.data.gov.uk) with any changes to the data at all the endpoint URLs each day. 
 
-We look for changes to the data at all of the endpoint URLs we know about every night,
-so we can quickly update [planning.data.gov.uk](https://planning.data.gov.uk).
-
-It is simpler if you publish your changes to the same endpoint URL.
+Publish your changes to the same endpoint URL.
 If you create a new endpoint you need to [tell us about your data](#tell-us-about-your-data) again.
 
 ## Contact us
 
 $CTA
-If you need any help at any stage of the process,
-let us know by emailing <digitalland@communities.gov.uk> and a member of our team will be in touch.
+Email <digitalland@communities.gov.uk> to get help.
 $CTA
 
-You can participate in
-[improving the design of this data](https://design.planning.data.gov.uk/consideration/development-plans-and-timetables),
-and help ensure planning data meets your needs at [design.planning.data.gov.uk](https://design.planning.data.gov.uk). 
+You can help
+[improve the design of this and other planning data](https://design.planning.data.gov.uk/consideration/development-plans-and-timetables)
+at [design.planning.data.gov.uk](https://design.planning.data.gov.uk). 
 
 ## Technical specifications

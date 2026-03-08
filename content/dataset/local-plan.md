@@ -63,7 +63,7 @@ fields:
     - value: 'E60000132;E60000133;E60000135;E60000136'
 - field: name
   description: local plan name
-  guidance: Use the title of the adopted local plan document.
+  guidance: Use the title of the local plan document.
   examples:
     - value: 'County Durham Plan'
     - value: 'South Oxfordshire Joint Local Plan'
@@ -101,6 +101,15 @@ fields:
     - value: '34069/County-Durham-Plan'
     - value: 'central-lincolnshire'
     - value: 'barnet-local-plan-2021-2036'
+- field: required-housing
+  description: minimum number of homes that a plan seeks to provide during the plan period
+  guidance: |
+        Enter the minimum number of homes that the plan seeks to provide
+        during the plan period.
+  examples:
+    - example: durham-local-plan
+      entry-number: 1
+      value: 24852
 - field: start-date
   description: date when the plan was officially adopted
   guidance: |

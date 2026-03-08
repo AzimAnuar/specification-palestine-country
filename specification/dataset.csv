@@ -127,59 +127,59 @@ We keep and maintain this dataset to help us identify the organisations which pr
 crown-copyright,,,development-metric,The types of measurement used as a development policy metric,,,,,,4800000,4899999,ogl3,Development metric,,Development metrics,discovery,,dataset,,,,development,category,,
 crown-copyright,,development-plans-and-timetables,development-plan-boundary-type,A type of boundary covered by the development plan,,2024-07-12,26,,,3000000,3009999,ogl3,Development plan boundary type,,Development plan boundary types,alpha,,dataset,,,,development,category,,
 crown-copyright,,development-plans-and-timetables,development-plan-boundary,A boundary that a development plan covers,,2024-07-12,26,,,3010000,3099999,ogl3,Development plan boundary,,Development plan boundaries,alpha,,dataset,,,,development,geography,,
-crown-copyright,,development-plans-and-timetables,development-plan-document-type,The types of documents published for a development plan,,2023-10-10,26,,,5260000,5279999,ogl3,Development plan document type,,Development plan document types,alpha,,dataset,,,,development,category,,
-crown-copyright,,development-plans-and-timetables,development-plan-document,documents associated with a development plan,,2026-01-19,26,"Provide a list of documents associated with your development plan.
+crown-copyright,local-plan,development-plans-and-timetables,development-plan-document-type,The types of documents published for a development plan,,2023-10-10,26,,,5280000,5299999,ogl3,Development plan document type,,Development plan document types,alpha,,dataset,,,,development,category,,
+crown-copyright,local-plan,development-plans-and-timetables,development-plan-document,documents associated with a development plan,,2026-01-19,26,"Provide a list of documents associated with your development plan.
 Add a separate row with a link to each document on your website.
-",,4900000,4999999,ogl3,Development plan document,,Development plan documents,alpha,,dataset,,,,development,document,,
-crown-copyright,,development-plans-and-timetables,development-plan-event,The different event types in a development plan timetable,,2023-09-14,26,,,2900000,2949999,ogl3,Development plan event,,Development plan events,alpha,,dataset,,,,development,category,,
+",,3800000,3899999,ogl3,Development plan document,,Development plan documents,alpha,,dataset,,,,development,document,,
+crown-copyright,local-plan,development-plans-and-timetables,development-plan-event,The different event types in a development plan timetable,,2023-09-14,26,,,2950000,2999999,ogl3,Development plan event,,Development plan events,alpha,,dataset,,,,development,category,,
 crown-copyright,,development-plans-and-timetables,development-plan-geography-type,A type of geography that a development plan covers,2024-07-12,2023-09-21,26,,,0,0,ogl3,Development plan geography type,,Development plan geography types,alpha,,dataset,development-plan-boundary-type,,,development,category,,
 crown-copyright,,development-plans-and-timetables,development-plan-geography,A geography that a development plan covers,2024-07-12,2023-09-19,26,,,0,0,ogl3,Development plan geography,,Development plan geographies,alpha,,dataset,development-plan-boundary,,,development,geography,,
 crown-copyright,,development-plans-and-timetables,development-plan-status,The different statuses a plan can have,2023-10-23,,26,,,5000000,5099999,ogl3,Development plan status,,Development plan statuses,alpha,,dataset,,,,development,category,,
-crown-copyright,,development-plans-and-timetables,development-plan-timetable,log of past and predicted milestones and events when producing a development plan,,2026-01-19,26,"Record the key events and milestones in the timetable when producing your development plan.
-For new local plans your timetable must include a precise `predicted-date` against each entry.
-Update the entry to include the actual date in the `start-date` field when the event takes place.
+crown-copyright,local-plan,development-plans-and-timetables,development-plan-timetable,log of past and committed milestones and events when producing a development plan,,2026-01-19,26,"Your timetable must include an `event-date` for when you intend to meet the relevant stage of plan-making.
+Update the entry to include the actual date in the `actual-date` field when the event takes place.
 
-For local plans, minerals plans, and waste plans being produced under the new local plans process,
-your timetable must include a entry for each of the following events:
+For local plans, minerals and waste plans your timetable must include an entry for each of the
+following `development-plan-event` field values where applicable:
 
-* `commenced`
+* `publish-notice-intention-commence`
 * `scoping-consultation-start`
 * `scoping-consultation-end`
 * `gateway-1-self-assessment`
-* `content-consultation-start`
-* `content-consultation-end`
+* `plan-content-evidence-consultation-start`
+* `plan-content-evidence-consultation-end`
 * `gateway-2-advice-sought`
-* `gateway-2-advice-published`
 * `proposed-plan-consultation-start`
 * `proposed-plan-consultation-end`
 * `gateway-3-advice-sought`
-* `gateway-3-advice-published`
-* `gateway-3-further-advice-sought`
-* `gateway-3-repeat-advice-published`
 * `examination-submitted`
-* `examination-recommendations-published`
 * `adopted`
 
-Supplementary plans being produced under the new local plans process must contain a row for each of the following events:
+If you are also creating a supplementary plan, your local or minerals and waste plans timetable
+must include an entry with the following development-plan-event fields where applicable:
 
-* `commenced`
+* `publish-notice-intention-commence`
 * `proposed-plan-consultation-start`
 * `proposed-plan-consultation-end`
 * `examination-submitted`
 * `adopted`
 
-Your development plan timetable may also include rows with dates for each of the following events:
+Your development plan timetable must also include rows with dates if any of the following events apply:
 
+* `gateway-3-repeat-advice-published`
+* `examination-recommendations-published`
 * `main-modification-consultation-start`
 * `main-modification-consultation-end`
 * `examination-pause-start`
 * `examination-pause-end`
 * `additional-consultation-start`
 * `additional-consultation-end`
-* `annual-monitoring-report-published`
-* `plan-evaluation-report-published`
 * `withdrawn`
 * `revoked`
+
+If you repeat Gateway 3, you must include these events in your timetable:
+
+* `gateway-3-further-advice-sought`
+* `gateway-3-advice-published`
 ",,5100000,5199999,ogl3,development plan timetable,,development plan timetables,alpha,,dataset,,,,development,timetable,,
 crown-copyright,,development-plans-and-timetables,development-plan-type,,,,26,,,5200000,5259999,ogl3,Development plan type,,Development plan types,alpha,,dataset,,,,development,category,,
 crown-copyright,,development-plans-and-timetables,development-plan,,,,26,,,,,ogl3,development plan,,development plans,alpha,,dataset,,,"This dataset is a package made from the local-plan, waste-plan, minerals-plan and supplementary-plan datasets.",development,legal-instrument,Q5266783,Development_plan
@@ -289,17 +289,17 @@ crown-copyright,,local-green-space,local-green-space,,,,,,,8900000,8999999,ogl3,
 crown-copyright,,local-nature-recovery-strategy,local-nature-recovery-strategy,,,,,,,9000000,9099999,ogl3,Local nature recovery strategy,,Local nature recovery strategies,alpha,,dataset,,,,environment,geography,,
 crown-copyright,local-nature-reserve,local-nature-reserves,local-nature-reserve,,,,48,,,45250000,45499999,ogl3,Local nature reserve,,Local nature reserves,beta,,dataset,,,Local nature reserves (LNR) are statutory designations for certain nature reserves in Great Britain.,environment;heritage,geography,Q3457526,Local_nature_reserve
 crown-copyright,local-plan,local-plans,local-plan-boundary,The boundary covered by a local plan.,,2024-09-14,97,,,4211000,4219999,ogl3,Local plan boundary,,Local plan boundaries,alpha,,dataset,,,,development,geography,,
-crown-copyright,local-plan,development-plans-and-timetables,local-plan-document-type,The types of documents published for a local plan,,2024-10-24,26,,,5280000,5299999,ogl3,Local plan document type,,Local plan document types,alpha,,dataset,,,,development,category,,
-crown-copyright,local-plan,development-plans-and-timetables,local-plan-document,documents associated with a local plan,,2024-09-14,26,"Provide a list of documents associated with your local plan.
+crown-copyright,,development-plans-and-timetables,local-plan-document-type,The types of documents published for a local plan,,2024-10-24,26,,,,,ogl3,Local plan document type,,Local plan document types,alpha,,dataset,,,,development,category,,
+crown-copyright,,development-plans-and-timetables,local-plan-document,documents associated with a local plan,,2024-09-14,26,"Provide a list of documents associated with your local plan.
 Add a separate row with a link to each document on your website.
-",,3800000,3899999,ogl3,Local plan document,,Local plan documents,alpha,,dataset,,,,development,document,,
-crown-copyright,local-plan,development-plans-and-timetables,local-plan-event,The different event types in a local plan timetable,,2024-10-22,26,,,2950000,2999999,ogl3,Local plan event,,Local plan events,alpha,,dataset,,,,development,category,,
-crown-copyright,local-plan,local-plans,local-plan-housing,Housing numbers for a Local Planning Authority in a local plan,,2024-10-26,26,"Use this dataset to provide the individual `required-housing` number for each Local Planning Authority within a joint new local plan.
+",,,,ogl3,Local plan document,,Local plan documents,alpha,,dataset,,,,development,document,,
+crown-copyright,,development-plans-and-timetables,local-plan-event,The different event types in a local plan timetable,,2024-10-22,26,,,,,ogl3,Local plan event,,Local plan events,alpha,,dataset,,,,development,category,,
+crown-copyright,,local-plans,local-plan-housing,Housing numbers for a Local Planning Authority in a local plan,,2024-10-26,26,"Use this dataset to provide the individual `required-housing` number for each Local Planning Authority within a joint new local plan.
 You may also use this dataset to provide additional housing numbers related to a local plan.
 There is no need to provide this dataset for other kinds of plan.
 ",,1100000,1199999,ogl3,local plan housing number,,local plan housing numbers,alpha,,dataset,,,,development,legal-instrument,,
 crown-copyright,,local-plans,local-plan-process,The examination process under which a local plan is produced,,2025-11-02,26,,,60000,60999,ogl3,Local plan process,,Local plan processes,alpha,,dataset,,,,development,category,,
-crown-copyright,local-plan,development-plans-and-timetables,local-plan-timetable,log of past and predicted milestones and events when producing a local plan,,2024-10-22,26,"The local plan timetable is a record of the key dates when producing a local plan.
+crown-copyright,,development-plans-and-timetables,local-plan-timetable,log of past and predicted milestones and events when producing a local plan,,2024-10-22,26,"The local plan timetable is a record of the key dates when producing a local plan.
 Your data should include a row for each of the events listed in the [local plan event](https://www.planning.data.gov.uk/dataset/local-plan-event) dataset with the date when the event happened.
 Provide your predicted range of dates for events which are in the future.
 ",,4230000,4299999,ogl3,Local plan timetable,,Local plan timetables,alpha,,dataset,,,,development,timetable,,
@@ -330,8 +330,8 @@ crown-copyright,,,lookup,Lookup entities,,,,,,,,ogl3,Pipeline lookup,,Pipeline l
 crown-copyright,,main-rivers,main-river,,,,,,,9600000,9699999,ogl3,Main river,,Main rivers,alpha,,dataset,,,,environment,geography,Q6736223,Main_river
 crown-copyright,,metropolitan-open-land,metropolitan-open-land,,,,,,,9700000,9799999,ogl3,Metropolitan open land,,Metropolitan open land,prioritised,,dataset,,,,environment,geography,Q16997686,Metropolitan_Open_Land
 crown-copyright,,mineral-safeguarding-areas,mineral-safeguarding-area,,,,,,,9800000,9899999,ogl3,Mineral safeguarding area,,Mineral safeguarding areas,prioritised,,dataset,,,,environment,geography,,
-crown-copyright,,minerals-and-waste-plan,minerals-plan-boundary,The boundary covered by a minerals plan.,,2025-11-14,350,,,570000,579999,ogl3,Minerals plan boundary,,Minerals plan boundaries,alpha,,dataset,,,,development,geography,,
-crown-copyright,,minerals-and-waste-plan,minerals-plan,minerals plans prepared by a Mineral Planning Authority,,2025-11-14,,"List the minerals plans you are responsible for with one row for each current, emerging or historical minerals plan.
+crown-copyright,local-plan,minerals-and-waste-plan,minerals-plan-boundary,The boundary covered by a minerals plan.,,2025-11-14,350,,,570000,579999,ogl3,Minerals plan boundary,,Minerals plan boundaries,alpha,,dataset,,,,development,geography,,
+crown-copyright,local-plan,minerals-and-waste-plan,minerals-plan,minerals plans prepared by a Mineral Planning Authority,,2025-11-14,,"List the minerals plans you are responsible for with one row for each current, emerging or historical minerals plan.
 ",,530000,539999,ogl3,minerals plan,,minerals plans,alpha,,dataset,,,,development,legal-instrument,Q6664491,Local_plan
 crown-copyright,national-nature-reserve,national-nature-reserves,national-nature-reserve,,,,48,,,45000000,45249999,ogl3,National nature reserve,,National nature reserves,beta,,dataset,,,Areas designated by Natural England as key places for wildlife and natural features in England,environment;heritage,geography,Q6974552,National_nature_reserves_in_England
 crown-copyright,organisation,,national-park-authority,,,,,,,9900000,9999999,ogl3,National park authority,,"National park authorities, including the Broads",beta,wikidata,dataset,,,"A [national park authority](https://www.nationalparks.uk/parks/) may have powers to create development policies,
@@ -493,8 +493,8 @@ ogl3,,uprn,uprn,Unique property reference numbers,,2024-11-05,,,,,,ogl3,UPRN,,UP
 ons-boundary,ward,council-wards,ward,Local areas that have been divided for voting purposes,,2024-07-02,,,,800000,899999,ogl3,Ward,"{ ""colour"": ""#3DA52C"" }",Wards,beta,statistical-geography,dataset,,,"Boundaries for Wards, in the United Kingdom",administrative,geography,,
 crown-copyright,organisation,,waste-authority,,,,,,,15800000,15899999,ogl3,Waste disposal authority,,Waste authorities,beta,wikidata,dataset,,,"An organisation responsible for municipal waste collection and disposal.
 We keep and maintain this dataset to help us identify the organisations which provide planning and housing data.",administrative,organisation,Q7972817,Waste_disposal_authority
-crown-copyright,,waste-local-plan,waste-plan-boundary,The boundary covered by a waste plan.,,2025-11-14,350,,,580000,589999,ogl3,Waste plan boundary,,Waste plan boundaries,alpha,,dataset,,,,development,geography,,
-crown-copyright,,waste-plans,waste-plan,waste plans prepared by a Mineral Planning Authority,,2025-11-14,,"List the waste plans you are responsible for with one row for each current, emerging or historical waste plan.
+crown-copyright,local-plan,waste-local-plan,waste-plan-boundary,The boundary covered by a waste plan.,,2025-11-14,350,,,580000,589999,ogl3,Waste plan boundary,,Waste plan boundaries,alpha,,dataset,,,,development,geography,,
+crown-copyright,local-plan,waste-plans,waste-plan,waste plans prepared by a Mineral Planning Authority,,2025-11-14,,"List the waste plans you are responsible for with one row for each current, emerging or historical waste plan.
 ",,540000,549999,ogl3,waste plan,,waste plans,alpha,,dataset,,,,development,legal-instrument,Q6664491,Local_plan
 crown-copyright,,wildbelt-designations,wildbelt,,,,,,,15900000,15999999,ogl3,Wildbelt,,Wildbelts,prioritised,,dataset,,,,environment,geography,,
 crown-copyright,,,wildlife,,,,,,,16000000,16099999,ogl3,Wildlife,,Wildlife,prioritised,,dataset,,,,environment,geography,,
